@@ -1,0 +1,215 @@
+/* ============================
+ ----  Base Element Styles ----
+ ============================*/
+ * {
+   box-sizing: border-box;
+ }
+
+ body {
+     font-family: "Merriweather", serif;
+     color:#a4a9ae;
+     font-size: 0.925em;
+ }
+
+ header {
+     height: 100px;
+     display: flex;
+     background:#2d3945;
+ }
+
+ .name a {
+   text-decoration: none;
+   color:#fff;
+ }
+
+ .name,
+ .main-footer {
+    margin:auto;
+    text-align: center;
+ }
+
+ .container,
+ form {
+     width: 90%;
+     margin: 0.125em auto;
+     max-width:600px;
+ }
+
+h1 {
+  text-transform: uppercase;
+  font-size:1.25rem;
+  color:#fff;
+}
+
+h2,
+legend {
+  color: #2d3945;
+  font-size: 1.25rem;
+  margin:0;
+}
+
+.main-footer {
+  font-style: italic;
+  padding:20px 0;
+  background: rgba(78,187,181,0.2);
+}
+
+/* -------- CONTAINER SPECIFIC */
+
+.intro {
+    text-align: center;
+    border-bottom: 4px solid #2d3945;
+    padding: 4em 0 2em;
+}
+
+
+/* ---------- FORM */
+
+fieldset {
+    padding-bottom: 1.75rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+hr {
+    border-top: solid #2d3945;
+    margin: 5px 0;
+    border-width: 2px 0 0 0;
+}
+
+legend {
+    padding: 1.75em 0 .5em;
+    font-weight: 800;
+}
+
+label {
+  display: block;
+  margin:1em 0 0.75em;
+  flex-grow:1;
+  color:#495d70;
+}
+
+label.selectbox {
+  font-weight: 300;
+  display: inline;
+}
+
+input,
+select,
+textarea {
+    border-radius: 5px;
+    border: none;
+    background: #eff0f1;
+    padding:15px 20px;
+    outline:0;
+    flex-grow:1;
+    border:2px solid transparent;
+    transition: 1s;
+
+  }
+
+textarea {
+  width:100%;
+  min-height:6em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  font-size:1em;
+  color:#000;
+}
+
+/* input#zip {
+    width: 150px;
+} */
+
+.field.short {
+    max-width: 330px;
+}
+
+.short input {
+    max-width: 150px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 10px 5px 10px 0px;
+    width: auto;
+}
+
+input[type]:focus,
+select:focus,
+textarea:focus {
+  border: 2px solid #46698b;
+  background: #ddd;
+  transition: 1s;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+ box-shadow: 0px 0px 10px rgba(71,106,138,1);
+}
+
+input[required]::-webkit-input-placeholder {
+    text-align: right;
+    font-style: italic;
+    color: #a8adb2;
+    font-size:.75em;
+}
+
+input::-moz-placeholder {
+    text-align: right;
+    font-style: italic;
+    color: #a8adb2;
+    font-size:.75em;
+}
+
+input:-ms-input-placeholder {
+    text-align: right;
+    font-style: italic;
+    color: #a8adb2;
+    font-size:.75em;
+}
+
+input:-moz-placeholder {
+    text-align: right;
+    font-style: italic;
+    color: #a8adb2;
+    font-size:.75em;
+}
+
+button {
+    padding: 20px;
+    color: #FFF;
+    background-color: #4ebbb5;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    border: none;
+    margin: 0 auto 1.25em;
+    font-weight: 800;
+    width:100%;
+}
+
+@media (min-width:768px) {
+
+  .field {
+    flex-direction: row;
+    margin:15px 0;
+  }
+
+  label {
+    flex-basis:0;
+    flex-grow: 1;
+  }
+
+  input, select {
+    flex-grow: 2;
+    max-width:70%
+  }
+}
